@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import viteTsconfigPaths from 'vite-tsconfig-paths';
 import svgrPlugin from 'vite-plugin-svgr';
 
-const target = 'http://192.168.2.6';
+const target = 'http://192.168.0.21';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,6 +16,7 @@ export default defineConfig({
         ws: true,
       },
     },
+    host: '0.0.0.0',
     port: 3000,
   },
   plugins: [react(), viteTsconfigPaths(), svgrPlugin()],
